@@ -23,6 +23,7 @@ struct Port {
   enum PortType   type;      ///< Data type
   enum PortFlow   flow;      ///< Data flow direction
   void*           sys_port;  ///< For audio/MIDI ports, otherwise NULL
+  void*           bypass_port; ///< For audio output ports, otherwise NULL
   LV2_Evbuf*      evbuf;     ///< For MIDI ports, otherwise NULL
   void*           widget;    ///< Control widget, if applicable
   size_t          buf_size;  ///< Custom buffer size, or 0

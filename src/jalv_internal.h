@@ -116,6 +116,7 @@ struct JalvImpl {
   bool                has_ui;          ///< True iff a control UI is present
   bool                request_update;  ///< True iff a plugin update is needed
   bool                safe_restore;    ///< Plugin restore() is thread-safe
+  uint8_t             bypass;          ///< 0=inline, 1=bypass, 2=switching to bypass, 3=switching to inline
   JalvFeatures        features;
   const LV2_Feature** feature_list;
   bool                unset_default;   ///< Set unused to default when loading preset
