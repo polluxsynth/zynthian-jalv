@@ -1,6 +1,8 @@
 // Copyright 2007-2022 David Robillard <d@drobilla.net>
 // SPDX-License-Identifier: ISC
 
+#define _GNU_SOURCE
+
 #include "backend.h"
 #include "control.h"
 #include "frontend.h"
@@ -44,7 +46,7 @@
 #include "zix/attributes.h"
 #include "zix/ring.h"
 #include "zix/sem.h"
-
+#include <string.h>
 #if USE_SUIL
 #  include "suil/suil.h"
 #endif
